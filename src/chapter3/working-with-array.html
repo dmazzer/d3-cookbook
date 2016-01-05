@@ -47,10 +47,12 @@
 </div>
 
 <div>
+    Nest aqui:
     <pre id="nest"></pre>
 </div>
 
-
+Nenhum texto a partir daqui:
+    
 <script type="text/javascript">
     var array = [3, 2, 11, 7, 6, 4, 10, 8, 15];
 
@@ -94,11 +96,13 @@
             .entries(records); // <- C
 
     d3.select("#nest").html(printNest(nest, ""));
+    
 
     function printNest(nest, out, i) {
         if(i === undefined) i = 0;
 
-        var tab = ""; for(var j = 0; j < i; ++j) tab += " ";
+        var tab = ""; 
+        for(var j = 0; j < i; ++j) tab += " ";
 
         nest.forEach(function (e) {
             if (e.key)

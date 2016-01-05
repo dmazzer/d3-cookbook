@@ -53,7 +53,7 @@
 
     function load(){ // <-E
         d3.json("data.json", function(error, json){ // <-F
-            data = data.concat(json);  
+            data = (json);  
             render(data);
         });
     }

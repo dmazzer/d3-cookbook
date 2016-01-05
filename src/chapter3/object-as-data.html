@@ -21,7 +21,7 @@
     
     var colorScale = d3.scale.linear()
         .domain([0, 100])
-        .range(["#add8e6", "blue"]); // <- B
+        .range(["lightblue", "darkblue"]); // <- B
 
     function render(data) {
         d3.select("body").selectAll("div.h-bar")
@@ -55,7 +55,8 @@
 
     setInterval(function () {
         data.shift();
-        data.push({width: randomValue(), color: randomValue()});
+        var k = randomValue();
+        data.push({width: k, color: k});
         render(data);
     }, 1500);
 

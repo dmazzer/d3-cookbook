@@ -18,6 +18,7 @@
             .attr("class", "red box") // <-- B
             .each(function (d, i) { // <-- C
                 d3.select(this).append("h1").text(i); // <-- D
+                console.log(d);
             });
 </script>
 

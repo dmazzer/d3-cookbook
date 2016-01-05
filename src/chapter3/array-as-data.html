@@ -10,7 +10,8 @@
 <body>
 
 <script type="text/javascript">
-    var data = [10, 15, 30, 50, 80, 65, 55, 30, 20, 10, 8]; // <- A
+    //var data     = [10, 15, 30, 50, 80, 65, 55, 30, 20, 10, 8]; // <- A
+    var data = new Array(15);
 
     function render(data) { // <- B
         // Enter
@@ -31,7 +32,7 @@
                     .text(function (d) {
                         return d;
                     });
-                
+                        
         // Exit
         d3.select("body").selectAll("div.h-bar")
             .data(data)
@@ -41,9 +42,9 @@
 
     setInterval(function () { // <- K
         data.shift();
-        data.push(Math.round(Math.random() * 100));
+        data.push(Math.round(Math.random() * 50));
         render(data);
-    }, 1500);
+    }, 100);
 
     render(data);
 </script>
